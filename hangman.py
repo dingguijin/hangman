@@ -7,6 +7,8 @@ def guess_next_letter(pattern, used_letters=[], word_list=["about", "abound", ..
         if isinstance(word, type(...)):
             continue
         for letter in word:
+            if len(word) != len(pattern):
+                continue
             if letter in used_letters:
                 continue
             if letter in pattern:
